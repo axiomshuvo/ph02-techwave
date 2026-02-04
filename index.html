@@ -7,7 +7,8 @@
     <title>Tech Wave</title>
     <style type="text/tailwindcss">
       :root {
-        --theme-bg: rgb(26 11 45);
+        --theme-bg: #1a0b2d;
+        --color-lm: #02cf3a;
         --color-y: #fcff00;
         --color-p: #ff00b5;
         --color-v: #4e00ff;
@@ -22,15 +23,18 @@
   </head>
   <body>
     <div class="text-white bg-[var(--theme-bg)] text-xl">
-      <header class="flex justify-around items-center py-5">
+      <header class="flex justify-around items-center py-6">
         <div class="logo">
           <h1 class="text-5xl font-bold">
-            Tech<span class="bg-[var(--gradient-wave)]">Wave</span>
+            Tech<span
+              class="bg-clip-text text-transparent bg-[linear-gradient(45deg,#fcff00_0%,#ff00b5_50%,#4e00ff_100%)]"
+              >Wave</span
+            >
           </h1>
         </div>
 
         <nav>
-          <ul class="flex gap-4">
+          <ul class="hidden md:flex gap-8">
             <li><a href="#">About</a></li>
             <li><a href="#">Episodes</a></li>
             <li><a href="#">Host</a></li>
@@ -38,15 +42,72 @@
         </nav>
 
         <div
-          class="rounded-3xl py-3 px-10 bg-[linear-gradient(45deg,#fcff00_0%,#ff00b5_50%,#4e00ff_100%)] text-white cursor-pointer"
+          class="items-center gap-2 hidden md:flex rounded-3xl py-3 px-6 bg-[linear-gradient(45deg,#fcff00_0%,#ff00b5_50%,#4e00ff_100%)] text-white cursor-pointer"
         >
           Subscribe
+          <svg
+            class="w-6 h-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 12H20M20 12L14 6M20 12L14 18"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </div>
-
         <div class="mobile-menu md:hidden">
           <img src="./assets/hamburger-menu.png" alt="Menu" />
         </div>
       </header>
+      <hr class="h-[1px] bg-[#522e80] border-0" />
+
+      <section
+        class="hero py-50 bg-[url('./assets/hero-bg.png')] bg-cover bg-center"
+      >
+        <div
+          class="micro relative flex justify-center after:absolute after:text-[var(--theme-bg)] after:bg-[var(--color-lm)] after:font-bold after:top-[5%] after:left-[54%] after:py-2 after:px-5 after:rounded-3xl after:content-['NEW']"
+        >
+          <img class="" src="./assets/hero-circle.png " alt="hero-circle" />
+          <span
+            class="absolute top-[50%] left-[50%] z-[99] transform -translate-x-1/2 -translate-y-1/2"
+            ><img src="./assets/microphone.png" alt="microphone"
+          /></span>
+        </div>
+        <div class="hero-title text-center my-10">
+          <h1 class="text-7xl font-extrabold">TechWave</h1>
+          <p class="my-5 text-gray-400">
+            Your daily dose of tech insights, productivity hacks,and personal
+            growth
+          </p>
+
+          <ul
+            class="flex justify-center items-center gap-3 [&>li>a]:border [&>li>a]:py-2 [&>li>a]:px-6 [&>li>a]:rounded-3xl"
+          >
+            <li>
+              <a
+                href="#"
+                class="flex items-center gap-2 bg-[linear-gradient(45deg,#fcff00_0%,#ff00b5_50%,#4e00ff_100%)]"
+              >
+                <img src="./assets/spotify.png" alt="spotify" /> Listen On
+                Spotify</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="border-[var(--color-lm)] text-[var(--color-lm)] flex items-center gap-2"
+              >
+                <img src="./assets/message.png" alt="mail icon" /> Subscribe</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
   </body>
 </html>
