@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Tech Wave</title>
+    <style type="text/tailwindcss">
+      :root {
+        --theme-bg: rgb(26 11 45);
+        --color-y: #fcff00;
+        --color-p: #ff00b5;
+        --color-v: #4e00ff;
+        --gradient-wave: linear-gradient(
+          45deg,
+          var(--color-y) 0%,
+          var(--color-p) 50%,
+          var(--color-v) 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-white bg-[var(--theme-bg)] text-xl">
+      <header class="flex justify-around items-center py-5">
+        <div class="logo">
+          <h1 class="text-5xl font-bold">
+            Tech<span class="bg-[var(--gradient-wave)]">Wave</span>
+          </h1>
+        </div>
+
+        <nav>
+          <ul class="flex gap-4">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Episodes</a></li>
+            <li><a href="#">Host</a></li>
+          </ul>
+        </nav>
+
+        <div
+          class="rounded-3xl py-3 px-10 bg-[linear-gradient(45deg,#fcff00_0%,#ff00b5_50%,#4e00ff_100%)] text-white cursor-pointer"
+        >
+          Subscribe
+        </div>
+
+        <div class="mobile-menu md:hidden">
+          <img src="./assets/hamburger-menu.png" alt="Menu" />
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
