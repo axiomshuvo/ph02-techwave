@@ -20,10 +20,27 @@
           var(--color-v) 100%
         );
       }
+      @keyframes jilik {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+      }
+      @keyframes shine {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="text-white bg-[var(--theme-bg)] text-xl">
+    <div class="text-white bg-[var(--theme-bg)] text-xl overflow-hidden">
       <header class="flex justify-around items-center py-6">
         <div class="logo">
           <h1 class="text-5xl font-bold">
@@ -43,7 +60,7 @@
         </nav>
 
         <div
-          class="items-center gap-2 hidden md:flex rounded-3xl py-3 px-6 bg-[linear-gradient(45deg,#fcff00_0%,#ff00b5_50%,#4e00ff_100%)] text-white cursor-pointer"
+          class="items-center gap-2 hidden md:flex rounded-3xl py-3 px-6 bg-[linear-gradient(45deg,#fcff00_0%,#ff00b5_50%,#4e00ff_100%)] text-white cursor-pointer bg-[length:200%_100%] hover:animate-[shine_1.5s_linear_infinite] transition duration-300 ease-out hover:scale-105"
         >
           Subscribe
           <svg
@@ -70,14 +87,16 @@
       <section
         class="hero py-30 bg-[url('./assets/hero-bg.png')] bg-cover bg-center"
       >
-        <div
-          class="micro relative flex justify-center after:absolute after:text-[var(--theme-bg)] after:bg-[var(--color-lm)] after:font-bold after:top-[5%] after:left-[54%] after:py-2 after:px-5 after:rounded-3xl after:content-['NEW']"
-        >
-          <img class="" src="./assets/hero-circle.png " alt="hero-circle" />
-          <span
-            class="absolute top-[50%] left-[50%] z-[99] transform -translate-x-1/2 -translate-y-1/2"
-            ><img src="./assets/microphone.png" alt="microphone"
-          /></span>
+        <div class="micro relative flex justify-center">
+          <div
+            class="after:absolute after:text-[var(--theme-bg)] after:bg-[var(--color-lm)] after:font-bold after:top-[5%] after:left-[54%] after:py-2 after:px-5 after:rounded-3xl after:content-['NEW'] cursor-pointer hover:after:animate-[jilik_1s_linear_infinite]"
+          >
+            <img class="" src="./assets/hero-circle.png " alt="hero-circle" />
+            <span
+              class="absolute top-[50%] left-[50%] z-[99] transform -translate-x-1/2 -translate-y-1/2"
+              ><img src="./assets/microphone.png" alt="microphone"
+            /></span>
+          </div>
         </div>
         <div class="hero-title text-center my-10">
           <h1 class="text-7xl font-extrabold">TechWave</h1>
@@ -213,6 +232,179 @@
           </div>
         </div>
       </section>
+
+      <section class="feature py-30 max-w-[80%] mx-auto">
+        <div
+          class="epi-list [&>div]:rounded-3xl [&>div]:overflow-hidden [&>div]:bg-[#240a44] grid grid-cols-1 lg:grid-cols-3 gap-8 [&>.single-epi>iframe]:block [&>.single-epi>div]:p-8 [&>.single-epi>.epi-details>p]:py-5 [&>.single-epi>.epi-details>span]:flex [&>.single-epi>.epi-details>span]:gap-2 [&>.single-epi>.epi-details>span>img]:w-5 [&>.single-epi>.epi-details>span>img]:h-5 [&>.single-epi>.epi-details>span>img]:shrink-0 [&>.single-epi>.epi-details>span]:items-center"
+        >
+          <div class="single-epi">
+            <iframe
+              class="w-full aspect-video"
+              src="https://www.youtube.com/embed/xf3jtSIZryQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
+            >
+            </iframe>
+
+            <div class="epi-details">
+              <h2 class="text-3xl font-bold">
+                The Future of Al in Everyday Life
+              </h2>
+              <p>
+                Exploring how artificial intelligence is transforming our daily
+                routines and what to expect in the next decade.
+              </p>
+              <span><img src="./assets/clock.png" alt="clock" /> 42 min</span>
+            </div>
+          </div>
+
+          <div class="single-epi">
+            <iframe
+              class="w-full aspect-video"
+              src="https://www.youtube.com/embed/AfxNObHz0ps"
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
+            >
+            </iframe>
+
+            <div class="epi-details">
+              <h2 class="text-3xl font-bold">
+                Building Better Habbits for Remote Work
+              </h2>
+              <p>
+                Practical strategies for staying productive and maintaining
+                work-life balance in a remote environment.
+              </p>
+              <span><img src="./assets/clock.png" alt="clock" /> 35 min</span>
+            </div>
+          </div>
+
+          <div class="single-epi">
+            <iframe
+              class="w-full aspect-video"
+              src="https://www.youtube.com/embed/S8gHPeO792g"
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
+            >
+            </iframe>
+
+            <div class="epi-details">
+              <h2 class="text-3xl font-bold">
+                Carrer Growth in Tech: A Roadmap
+              </h2>
+              <p>
+                Expert advice on navigating your tech carrer from junior
+                developer to senior leadership roles.
+              </p>
+              <span><img src="./assets/clock.png" alt="clock" /> 51 min</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="host pt-30">
+          <h1 class="text-6xl font-extrabold text-center mb-15">
+            Meet The Host
+          </h1>
+
+          <div
+            class="host-profile grid md:grid-cols-5 gap-6 bg-[#240a44] p-10 rounded-4xl"
+          >
+            <img
+              class="md:col-span-1 w-40 h-40 rounded-full object-cover mx-auto md:mx-0"
+              src="./assets/host.png"
+              alt="host"
+            />
+
+            <div class="host-details md:col-span-4 text-center md:text-left">
+              <h2 class="text-4xl font-bold">Alex Kumar</h2>
+              <p class="text-gray-400 font-light py-8">
+                Tech entrepreneur, productivity expert, and lifelong leaner.
+                Alex has been in the tech industry for over 10 years, working
+                with startups and Fortune 500 companies. Through techWave, Alex
+                shares insights from industry leaders and practical advice for
+                anyone looking to grow in tech.
+              </p>
+              <ul
+                class="flex gap-4 justify-center md:justify-start [&>li]:rounded-full [&>li]:border [&>li]:border-gray-400 [&>li]:object-cover [&>li]:p-1 [&>li]:w-10 [&>li]:h-10 [&>li]:flex [&>li]:justify-center [&>li]:items-center"
+              >
+                <li>
+                  <a href="#"
+                    ><img src="./assets/linkedin.png" alt="linkedin"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="./assets/x.png" alt="x-icon" /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./assets/instagram.png" alt="instagram"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./assets/youtube.png" alt="youtube"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        class="bg-[url('./assets/footer-bg.png')] flex flex-col justify-center items-center font-light text-gray-400 py-30"
+      >
+        <h1 class="text-5xl lg:text-8xl font-bold">
+          Tech<span
+            class="bg-clip-text text-transparent bg-[linear-gradient(45deg,#fcff00_0%,#ff00b5_50%,#4e00ff_100%)]"
+            >Wave</span
+          >
+        </h1>
+        <ul
+          class="grid grid-cols-2 lg:grid-cols-4 gap-6 [&>li]:flex [&>li]:justify-center [&>li]:gap-2 [&>li]:items-center [&>li>img]:w-7 [&>li>img]:h-auto py-8"
+        >
+          <li><img src="./assets/spotify.png" alt="" /> Spotify</li>
+          <li>
+            <img src="./assets/apple-podcast.png" alt="apple podcast" /> Apple
+            Podcasts
+          </li>
+          <li>
+            <img src="./assets/youtube-podcast.png" alt="youtube" /> Youtube
+          </li>
+          <li><img src="./assets/twitter.png" alt="twitter" /> Twitter</li>
+        </ul>
+        <p>&copy; 2026 TechWave Podcast. All rights reserved.</p>
+      </footer>
     </div>
   </body>
 </html>
