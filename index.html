@@ -43,12 +43,14 @@
     <div class="text-white bg-[var(--theme-bg)] text-xl overflow-hidden">
       <header class="flex justify-around items-center py-6">
         <div class="logo">
-          <h1 class="text-5xl font-bold">
-            Tech<span
-              class="bg-clip-text text-transparent bg-[linear-gradient(45deg,#fcff00_0%,#ff00b5_50%,#4e00ff_100%)]"
-              >Wave</span
-            >
-          </h1>
+          <a href="#"
+            ><h1 class="text-5xl font-bold">
+              Tech<span
+                class="bg-clip-text text-transparent bg-[linear-gradient(45deg,#fcff00_0%,#ff00b5_50%,#4e00ff_100%)]"
+                >Wave</span
+              >
+            </h1>
+          </a>
         </div>
 
         <nav>
@@ -111,7 +113,7 @@
             <li>
               <a
                 href="#"
-                class="flex items-center gap-2 bg-[linear-gradient(45deg,#fcff00_0%,#ff00b5_50%,#4e00ff_100%)]"
+                class="flex items-center gap-2 bg-[linear-gradient(45deg,#fcff00_0%,#ff00b5_50%,#4e00ff_100%)] cursor-pointer bg-[length:200%_100%] hover:animate-[shine_1.5s_linear_infinite] transition duration-300 ease-out hover:scale-105"
               >
                 <img src="./assets/spotify.png" alt="spotify" /> Listen On
                 Spotify</a
@@ -120,7 +122,7 @@
             <li>
               <a
                 href="#"
-                class="border-[var(--color-lm)] text-[var(--color-lm)] flex items-center gap-2"
+                class="border-[var(--color-lm)] text-[var(--color-lm)] flex items-center gap-2 cursor-pointer hover:animate-[shine_1.5s_linear_infinite] transition duration-300 ease-out hover:scale-105"
               >
                 <img src="./assets/message.png" alt="mail icon" /> Subscribe</a
               >
@@ -235,9 +237,11 @@
 
       <section class="feature py-30 max-w-[80%] mx-auto">
         <div
-          class="epi-list [&>div]:rounded-3xl [&>div]:overflow-hidden [&>div]:bg-[#240a44] grid grid-cols-1 lg:grid-cols-3 gap-8 [&>.single-epi>iframe]:block [&>.single-epi>div]:p-8 [&>.single-epi>.epi-details>p]:py-5 [&>.single-epi>.epi-details>span]:flex [&>.single-epi>.epi-details>span]:gap-2 [&>.single-epi>.epi-details>span>img]:w-5 [&>.single-epi>.epi-details>span>img]:h-5 [&>.single-epi>.epi-details>span>img]:shrink-0 [&>.single-epi>.epi-details>span]:items-center"
+          class="epi-list grid grid-cols-1 lg:grid-cols-3 gap-8 [&>.single-epi]:cursor-pointer [&>div]:rounded-3xl [&>div]:overflow-hidden [&>div]:bg-[#240a44] [&>.single-epi>iframe]:block [&>.single-epi>div]:p-8 [&>.single-epi>.epi-details>p]:py-5 [&>.single-epi>.epi-details>span]:flex [&>.single-epi>.epi-details>span]:gap-2 [&>.single-epi>.epi-details>span>img]:w-5 [&>.single-epi>.epi-details>span>img]:h-5 [&>.single-epi>.epi-details>span>img]:shrink-0 [&>.single-epi>.epi-details>span]:items-center"
         >
-          <div class="single-epi">
+          <div
+            class="single-epi hover:scale-105 transition duration-300 ease-in-out"
+          >
             <iframe
               class="w-full aspect-video"
               src="https://www.youtube.com/embed/xf3jtSIZryQ"
@@ -268,7 +272,9 @@
             </div>
           </div>
 
-          <div class="single-epi">
+          <div
+            class="single-epi hover:scale-105 transition duration-300 ease-in-out"
+          >
             <iframe
               class="w-full aspect-video"
               src="https://www.youtube.com/embed/AfxNObHz0ps"
@@ -299,7 +305,9 @@
             </div>
           </div>
 
-          <div class="single-epi">
+          <div
+            class="single-epi hover:scale-105 transition duration-300 ease-in-out"
+          >
             <iframe
               class="w-full aspect-video"
               src="https://www.youtube.com/embed/S8gHPeO792g"
@@ -331,7 +339,9 @@
           </div>
         </div>
 
-        <div class="host pt-30">
+        <div
+          class="host pt-30 hover:scale-101 transition duration-300 ease-in-out"
+        >
           <h1 class="text-6xl font-extrabold text-center mb-15">
             Meet The Host
           </h1>
@@ -357,20 +367,20 @@
               <ul
                 class="flex gap-4 justify-center md:justify-start [&>li]:rounded-full [&>li]:border [&>li]:border-gray-400 [&>li]:object-cover [&>li]:p-1 [&>li]:w-10 [&>li]:h-10 [&>li]:flex [&>li]:justify-center [&>li]:items-center"
               >
-                <li>
+                <li class="hover:scale-110 transition duration-300 ease-in-out">
                   <a href="#"
                     ><img src="./assets/linkedin.png" alt="linkedin"
                   /></a>
                 </li>
-                <li>
+                <li class="hover:scale-110 transition duration-300 ease-in-out">
                   <a href="#"><img src="./assets/x.png" alt="x-icon" /></a>
                 </li>
-                <li>
+                <li class="hover:scale-110 transition duration-300 ease-in-out">
                   <a href="#"
                     ><img src="./assets/instagram.png" alt="instagram"
                   /></a>
                 </li>
-                <li>
+                <li class="hover:scale-110 transition duration-300 ease-in-out">
                   <a href="#"
                     ><img src="./assets/youtube.png" alt="youtube"
                   /></a>
@@ -384,26 +394,34 @@
       <footer
         class="bg-[url('./assets/footer-bg.png')] flex flex-col justify-center items-center font-light text-gray-400 py-30"
       >
-        <h1 class="text-5xl lg:text-8xl font-bold">
+        <h1
+          class="text-5xl lg:text-8xl font-bold cursor-pointer hover:scale-105 transition duration-300 ease-in-out"
+        >
           Tech<span
             class="bg-clip-text text-transparent bg-[linear-gradient(45deg,#fcff00_0%,#ff00b5_50%,#4e00ff_100%)]"
             >Wave</span
           >
         </h1>
         <ul
-          class="grid grid-cols-2 lg:grid-cols-4 gap-6 [&>li]:flex [&>li]:justify-center [&>li]:gap-2 [&>li]:items-center [&>li>img]:w-7 [&>li>img]:h-auto py-8"
+          class="grid grid-cols-2 lg:grid-cols-4 gap-6 [&>li]:cursor-pointer [&>li]:flex [&>li]:justify-center [&>li]:gap-2 [&>li]:items-center [&>li>img]:w-7 [&>li>img]:h-auto py-8"
         >
-          <li><img src="./assets/spotify.png" alt="" /> Spotify</li>
-          <li>
+          <li class="hover:scale-105 transition duration-300 ease-in-out">
+            <img src="./assets/spotify.png" alt="" /> Spotify
+          </li>
+          <li class="hover:scale-105 transition duration-300 ease-in-out">
             <img src="./assets/apple-podcast.png" alt="apple podcast" /> Apple
             Podcasts
           </li>
-          <li>
+          <li class="hover:scale-105 transition duration-300 ease-in-out">
             <img src="./assets/youtube-podcast.png" alt="youtube" /> Youtube
           </li>
-          <li><img src="./assets/twitter.png" alt="twitter" /> Twitter</li>
+          <li class="hover:scale-105 transition duration-300 ease-in-out">
+            <img src="./assets/twitter.png" alt="twitter" /> Twitter
+          </li>
         </ul>
-        <p>&copy; 2026 TechWave Podcast. All rights reserved.</p>
+        <p class="hover:scale-105 transition duration-300 ease-in-out">
+          &copy; 2026 TechWave Podcast. All rights reserved.
+        </p>
       </footer>
     </div>
   </body>
