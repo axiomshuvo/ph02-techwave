@@ -24,3 +24,4 @@ build/
 # Environment variables
 .env
 .gitignore
+.vscode/
